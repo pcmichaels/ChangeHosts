@@ -1,0 +1,18 @@
+﻿<Window x:Class="ChangeHosts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChangeHosts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid Margin="20">
+        <StackPanel>
+            <!--<TextBox Text="{Binding URIFilter}"/>-->
+            <Button x:Name="LoadHosts" Click="LoadHosts_Click" Content="Load File" Margin="5"/>
+            <ComboBox x:Name="comboHosts" ItemsSource="{Binding HostSelections}" SelectedIndex="{Binding HostSelectedIdx}" Margin="5"/>
+            <Button x:Name="SetActiveHost" Click="SetActiveHost_Click" Content="Save Selection" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
